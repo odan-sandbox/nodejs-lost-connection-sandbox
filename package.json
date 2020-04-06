@@ -23,6 +23,9 @@
     "test": "run-p test:*",
     "test:build": "yarn build --noEmit",
     "test:jest": "yarn jest --detectOpenHandles --forceExit",
-    "test:lint": "eslint --ext .js,.ts --ignore-path .gitignore ."
+    "test:lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
+    "start:server": "ts-node src/app.ts",
+    "start:client": "ts-node src/client.ts",
+    "start": "run-p --silent --continue-on-error start:*"
   }
 }
